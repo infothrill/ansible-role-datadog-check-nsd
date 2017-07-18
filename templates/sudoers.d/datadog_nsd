@@ -1,0 +1,1 @@
+{{ ddagent_user }} ALL=(ALL) NOPASSWD:/usr/sbin/nsd-control stats

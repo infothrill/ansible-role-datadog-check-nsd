@@ -1,0 +1,37 @@
+---
+# tasks for datadog-check-nsd
+- name: "ensure sudo is available / apt"
+  apt:
+    name: sudo
+    state: present
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+
+- name: "ensure sudo is available / yum"
+  yum:
+    name: sudo
+    state: present
+  when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
+
+- name: "give dd-agent access to 'nsd-control stats' via sudo"
+  template:
+    src: templates/sudoers.d/datadog_nsd
+    dest: /etc/sudoers.d/datadog_nsd
+    owner: root
+    group: root
+    mode: 440
+
+- name: "copy nsd check"
+  copy:
+    src: "files/checks.d/nsd.py"
+    dest: "/etc/dd-agent/checks.d/nsd.py"
+    owner: "{{ ddagent_user }}"
+    group: "{{ ddagent_group }}"
+    mode: 0640
+
+- name: copy check example configuration
+  copy:
+    src: "files/conf.d/nsd.yaml.example"
+    dest: "/etc/dd-agent/conf.d/nsd.yaml.example"
+    owner: "{{ ddagent_user }}"
+    group: "{{ ddagent_group }}"
+    mode: 0640

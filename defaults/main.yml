@@ -1,0 +1,5 @@
+---
+# defaults for datadog-check-nsd
+
+ddagent_user: "dd-agent"
+ddagent_group: "dd-agent"

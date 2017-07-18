@@ -1,0 +1,5 @@
+---
+- hosts: all
+  roles:
+    - role: Datadog.datadog
+    - role: ansible-role-datadog-check-nsd
