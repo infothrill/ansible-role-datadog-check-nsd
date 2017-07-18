@@ -60,6 +60,6 @@ This role was created in 2017 by Paul Kremer.
 
 ## Changes
 
-### 1.0
+### v1.0
 
 * initial release
