@@ -1,13 +1,23 @@
 galaxy_info:
   description: Role to install a datadog check for NSD
   company: snakeoil
-  license: BSD
+  license: MIT
   min_ansible_version: 2.1.0
   platforms:
     - name: Ubuntu
       versions:
         - trusty
         - xenial
+    - name: Debian
+      versions:
+    #  - all
+    #  - etch
+    #  - jessie
+    #  - lenny
+    #  - sid
+    #  - squeeze
+    #  - stretch
+      - wheezy
   galaxy_tags:
     - nsd
     - datadog

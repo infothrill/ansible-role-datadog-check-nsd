@@ -12,7 +12,7 @@ requirements.yml:
 	- src: Datadog.datadog
 	  version: 1.4.0
 	- src: infothrill.datadog-check-nsd
-	  version: v1.0
+	  version: v1.0.1
 
 Install:
 
@@ -51,7 +51,7 @@ The recommended approach would be to:
 
 ## License
 
-MIT / BSD
+MIT
 
 ## Author Information
 
@@ -59,6 +59,10 @@ This role was created in 2017 by Paul Kremer.
 
 
 ## Changes
+
+### v1.0.1
+
+* added support for Debian Wheezy
 
 ### v1.0
 
