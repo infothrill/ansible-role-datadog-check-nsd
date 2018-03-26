@@ -1,3 +1,4 @@
+---
 galaxy_info:
   description: Role to install a datadog check for NSD
   company: snakeoil
@@ -10,14 +11,8 @@ galaxy_info:
         - xenial
     - name: Debian
       versions:
-    #  - all
-    #  - etch
-    #  - jessie
-    #  - lenny
-    #  - sid
-    #  - squeeze
-    #  - stretch
-      - wheezy
+        - jessie
+        - stretch
   galaxy_tags:
     - nsd
     - datadog

@@ -1,0 +1,11 @@
+---
+- name: Converge
+  hosts: all
+  vars:
+    - datadog_enabled: false
+  roles:
+    - role: robertdebock.bootstrap
+      bootstrap_preview: false
+    # - role: robertdebock.epel
+    - role: Datadog.datadog
+    - role: ansible-role-datadog-check-nsd

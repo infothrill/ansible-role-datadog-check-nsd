@@ -10,7 +10,7 @@ server.
 requirements.yml:
 
 	- src: Datadog.datadog
-	  version: 1.4.0
+	  version: 1.6.1
 	- src: infothrill.datadog-check-nsd
 	  version: v1.0.1
 
@@ -59,6 +59,12 @@ This role was created in 2017 by Paul Kremer.
 
 
 ## Changes
+
+### v1.0.2
+
+* added support for Debian Stretch and Jessie
+* upgraded molecule tests
+* dropped ansible 2.1 and added 2.5
 
 ### v1.0.1
 

@@ -1,0 +1,28 @@
+---
+dependency:
+  name: galaxy
+  options:
+    role-file: requirements.yml
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  - name: datadog-nsd-ubuntu-1404
+    image: ubuntu:14.04
+  - name: datadog-nsd-ubuntu-1604
+    image: ubuntu:16.04
+  - name: datadog-nsd-debian-stretch
+    image: debian:stretch
+  - name: datadog-nsd-debian-jessie
+    image: debian:jessie
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+scenario:
+  name: default
+verifier:
+  name: testinfra
+  lint:
+    name: flake8
