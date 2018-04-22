@@ -1,6 +1,0 @@
-FROM debian:wheezy
-
-RUN apt-get update -qq && apt-get install -qqy python
-
-# the datadog package postinst script requires `adduser`:
-RUN apt-get update -qq && apt-get install -qqy adduser
