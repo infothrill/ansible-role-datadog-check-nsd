@@ -1,5 +1,11 @@
 # Ansible role datadog-check-nsd
 
+[![Build Status](https://img.shields.io/travis/infothrill/ansible-role-datadog-check-nsd/master.svg?label=travis_master)](https://travis-ci.org/infothrill/ansible-role-datadog-check-nsd)
+[![Build Status](https://img.shields.io/travis/infothrill/ansible-role-datadog-check-nsd/develop.svg?label=travis_develop)](https://travis-ci.org/infothrill/ansible-role-datadog-check-nsd)
+[![Updates](https://pyup.io/repos/github/infothrill/ansible-role-datadog-check-nsd/shield.svg)](https://pyup.io/repos/github/infothrill/ansible-role-datadog-check-nsd/)
+[![Ansible Role](https://img.shields.io/ansible/role/19313.svg)](https://galaxy.ansible.com/infothrill/datadog-check-nsd/)
+
+
 An [Ansible](http://www.ansible.com) role to install a
 [Datadog](https://www.datadoghq.com) agent check for
 [NSD](https://www.nlnetlabs.nl/projects/nsd/), an authoritative only name
