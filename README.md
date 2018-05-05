@@ -18,7 +18,7 @@ requirements.yml:
 	- src: Datadog.datadog
 	  version: 1.6.1
 	- src: infothrill.datadog-check-nsd
-	  version: v1.0.1
+	  version: v1.1.0
 
 Install:
 
@@ -65,6 +65,12 @@ This role was created in 2017 by Paul Kremer.
 
 
 ## Changes
+
+### v1.1.0
+
+* Auto-detect agent5/6 configuration directory (backwards compatible)
+* Add support for EL 6,7
+* Optimize molecule test
 
 ### v1.0.2
 

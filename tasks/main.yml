@@ -12,6 +12,20 @@
     state: present
   when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
 
+- name: Set default datadog agent config dir
+  set_fact:
+    _ddagent_config_dir: "/etc/dd-agent"
+
+- name: Detect datadog agent 6 config dir
+  stat:
+    path: /etc/datadog-agent
+  register: _ddagent_etc_dir
+
+- name: Set default datadog agent config dir
+  set_fact:
+    _ddagent_config_dir: "/etc/datadog-agent"
+  when: _ddagent_etc_dir.stat.isdir is defined and _ddagent_etc_dir.stat.isdir
+
 - name: "give dd-agent access to 'nsd-control stats' via sudo"
   template:
     src: templates/sudoers.d/datadog_nsd
@@ -23,7 +37,7 @@
 - name: "copy nsd check"
   copy:
     src: "files/checks.d/nsd.py"
-    dest: "/etc/dd-agent/checks.d/nsd.py"
+    dest: "{{ _ddagent_config_dir }}/checks.d/nsd.py"
     owner: "{{ ddagent_user }}"
     group: "{{ ddagent_group }}"
     mode: 0640
@@ -31,7 +45,7 @@
 - name: copy check example configuration
   copy:
     src: "files/conf.d/nsd.yaml.example"
-    dest: "/etc/dd-agent/conf.d/nsd.yaml.example"
+    dest: "{{ _ddagent_config_dir }}/conf.d/nsd.yaml.example"
     owner: "{{ ddagent_user }}"
     group: "{{ ddagent_group }}"
     mode: 0640
