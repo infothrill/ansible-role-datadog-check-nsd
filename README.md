@@ -66,7 +66,7 @@ This role was created in 2017 by Paul Kremer.
 
 ## Changes
 
-### v1.1.x
+### v1.1.1
 
 * drop support for EOL ansible version 2.2, 2.3
 
