@@ -23,4 +23,5 @@ galaxy_info:
     - datadog
     - metrics
     - dns
+    - monitoring
   dependencies: []
