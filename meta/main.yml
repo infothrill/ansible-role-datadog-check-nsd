@@ -3,6 +3,7 @@ galaxy_info:
   role_name: datadog-check-nsd
   description: Role to install a datadog check for NSD
   company: "n/a"
+  author: "Paul Kremer"
   license: MIT
   min_ansible_version: 2.4
   platforms:
