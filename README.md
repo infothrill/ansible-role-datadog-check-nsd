@@ -3,7 +3,7 @@
 [![Build Status](https://img.shields.io/travis/infothrill/ansible-role-datadog-check-nsd/master.svg?label=travis_master)](https://travis-ci.org/infothrill/ansible-role-datadog-check-nsd)
 [![Build Status](https://img.shields.io/travis/infothrill/ansible-role-datadog-check-nsd/develop.svg?label=travis_develop)](https://travis-ci.org/infothrill/ansible-role-datadog-check-nsd)
 [![Updates](https://pyup.io/repos/github/infothrill/ansible-role-datadog-check-nsd/shield.svg)](https://pyup.io/repos/github/infothrill/ansible-role-datadog-check-nsd/)
-[![Ansible Role](https://img.shields.io/ansible/role/19313.svg)](https://galaxy.ansible.com/infothrill/datadog-check-nsd/)
+[![Ansible Role](https://img.shields.io/ansible/role/30245.svg)](https://galaxy.ansible.com/infothrill/datadog_check_nsd/)
 
 
 An [Ansible](http://www.ansible.com) role to install a
@@ -17,8 +17,8 @@ requirements.yml:
 
 	- src: Datadog.datadog
 	  version: 1.6.1
-	- src: infothrill.datadog-check-nsd
-	  version: v1.1.0
+	- src: infothrill.datadog_check_nsd
+	  version: v1.1.1
 
 Install:
 
@@ -29,7 +29,7 @@ Playbook:
     - hosts: servers
         roles:
 		    - role: Datadog.datadog
-		    - role: ansible-role-datadog-check-nsd
+		    - role: infothrill.datadog_check_nsd
 
 To configure the check, please use the Datadog.datadog role and add an entry
 in the `checks` dictionary there:
@@ -65,6 +65,10 @@ This role was created in 2017 by Paul Kremer.
 
 
 ## Changes
+
+### v1.1.x
+
+* add testing support for ansible 2.8
 
 ### v1.1.1
 
