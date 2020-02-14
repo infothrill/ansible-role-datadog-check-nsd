@@ -8,8 +8,6 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: datadog-nsd-ubuntu-1404
-    image: ubuntu:14.04
   - name: datadog-nsd-ubuntu-1604
     image: ubuntu:16.04
   - name: datadog-nsd-ubuntu-1804
@@ -18,8 +16,6 @@ platforms:
     image: debian:stretch
   - name: datadog-nsd-debian-jessie
     image: debian:jessie
-  - name: datadog-nsd-centos-6
-    image: centos:6
   - name: datadog-nsd-centos-7
     image: centos:7
 provisioner:
