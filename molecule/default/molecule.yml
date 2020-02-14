@@ -16,8 +16,6 @@ platforms:
     image: debian:stretch
   - name: datadog-nsd-debian-jessie
     image: debian:jessie
-  - name: datadog-nsd-centos-7
-    image: centos:7
 provisioner:
   name: ansible
   lint:
