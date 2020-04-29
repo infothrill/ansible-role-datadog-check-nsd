@@ -1,6 +1,6 @@
 # pin pytest to an older version for now (AttributeError: module 'pytest' has no attribute 'RemovedInPytest4Warning')
 pytest<4.0.0
-molecule==2.22
+molecule==3.0.4
 ansible-lint==4.2.0
 # needed in this case because we run tests with docker containers:
 docker==4.2.0
