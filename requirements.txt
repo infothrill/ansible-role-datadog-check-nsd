@@ -1,4 +1,3 @@
-# pin pytest to an older version for now (AttributeError: module 'pytest' has no attribute 'RemovedInPytest4Warning')
 pytest==6.0.1
 molecule==2.22
 ansible-lint==4.3.2
