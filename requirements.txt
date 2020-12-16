@@ -1,4 +1,4 @@
-pytest==6.0.1
+pytest==6.2.1
 molecule==2.22
 ansible-lint==4.3.2
 # needed in this case because we run tests with docker containers:
