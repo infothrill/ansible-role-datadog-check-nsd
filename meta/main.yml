@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  role_name: datadog-check-nsd
+  role_name: datadog_check_nsd
   description: Role to install a datadog check for NSD
   company: "n/a"
   author: "Paul Kremer"
