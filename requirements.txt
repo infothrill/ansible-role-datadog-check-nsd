@@ -1,5 +1,5 @@
 pytest==6.2.2
-molecule==3.2.3
+molecule==3.3.2
 molecule-docker==0.3.3
 ansible-lint==4.3.2
 # needed in this case because we run tests with docker containers:
